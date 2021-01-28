@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['extract_cas.py'],
-             pathex=['W:\\dat\\msx\\cas_TOOL\\extract_cas\\src'],
+             pathex=['W:\\Dat\\MSX\\_ORE\\extract_cas\\src'],
              binaries=[],
              datas=[],
              hiddenimports=[],

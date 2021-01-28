@@ -109,7 +109,14 @@ while is_loop:
         dtype = DType.CUSTOM
         outname = 'custom_' + str(custom_no)
         custom_no = custom_no + 1
-    outname = outname + '.' + dtype_str[dtype]
+
+    outname_t = outname + '.' + dtype_str[dtype]
+    f_num = 1
+    while (os.path.isfile(outfilename + outname_t)):
+    	outname_t = outname + '_#{:04X}.'.format(f_num) + dtype_str[dtype]
+    	f_num = f_num + 1
+    outname = outname_t
+
     #print(str(fhpos) + ': ', end='')
     print(format(fhpos, '08x') + ': ', end='')
     print(format(file_no, '02d') + ': ' + dtype_name[dtype] + ': ', end='')
